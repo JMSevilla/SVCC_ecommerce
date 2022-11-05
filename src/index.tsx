@@ -2,7 +2,6 @@ import React from "react";
 import App from "./router";
 import ReactDOM from "react-dom";
 import { BrowserRouter } from "react-router-dom";
-
 ReactDOM.render(
   <BrowserRouter>
     <App />

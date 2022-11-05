@@ -11,6 +11,8 @@ import "@fontsource/roboto/700.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "rc-footer/assets/index.css";
 
+import FieldContext from "../core/context/FieldContext";
+
 interface ICalc {
   Component: React.ComponentType;
   exact?: any;
@@ -24,16 +26,19 @@ const RouteWithLoad: React.FC<ICalc> = ({ Component, ...rest }) => {
 export default function App() {
   return (
     <Switch>
-      <RouteWithLoad
-        exact
-        path={ApplicationRouter.home.path}
-        Component={Home}
-      />
-      <RouteWithLoad
-        exact
-        path={ApplicationRouter.products.path}
-        Component={Products}
-      />
+      <FieldContext>
+        {/* toast container standard implementation */}
+        <RouteWithLoad
+          exact
+          path={ApplicationRouter.home.path}
+          Component={Home}
+        />
+        <RouteWithLoad
+          exact
+          path={ApplicationRouter.products.path}
+          Component={Products}
+        />
+      </FieldContext>
     </Switch>
   );
 }

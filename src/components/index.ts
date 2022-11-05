@@ -7,3 +7,5 @@ export { default as SystemCarousel } from "./Carousel/carousel";
 export { default as SystemGrid } from "./Grid/Grid";
 export { default as SystemCard } from "./Card/Card";
 export { default as Footer } from "./Footer/Footer";
+export { default as SystemDialog } from "./Dialog/Dialog";
+export { default as SystemDataGrid } from "./DataGrid/DataGrid";
